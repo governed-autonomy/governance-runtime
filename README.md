@@ -201,6 +201,11 @@ See `TROUBLESHOOTING.md`.
 - `DM_SCRIPT.md` — copy/paste instructions you can DM to someone so they can run the demo themselves.
 - `NOTES/SHARING_CLEAN.md` — notes on keeping a share folder clean (running in-place creates normal Python artifacts).
 
+## Testing philosophy (MVP)
+- Prefer deterministic rules + test coverage over “prompt discipline.”
+- Add metamorphic/variation tests to reduce regressions from wording changes.
+- Include a toy PEP simulation (see `governance_runtime/pep_sim.py`) so we can test the enforcement seam (tool is only called on ALLOW).
+
 ## Wizards (no-JSON UX)
 - `governance wizard` — run decisions on many URLs interactively.
 - `governance policy-wizard` — tune action decisions (ALLOW/ASK/DENY) interactively. For `login`, it can optionally help you update domain allowlists in the same flow.
