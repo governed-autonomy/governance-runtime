@@ -153,6 +153,12 @@ governance decide \
 - Automatic effects derivation from arbitrary tool plans (beyond `--action` presets)
 - A full enforcement layer that intercepts every real tool call automatically
 
+## Tiny PEP integration demo (example)
+There is a minimal example wrapper showing how a PEP might call the PDP before executing a tool call:
+- `examples/pep_wrapper_demo.py`
+
+This is intentionally a toy example (no real tools are executed).
+
 ## Policy config (domains)
 The config file controls:
 - `always_human_domains`: domains that are non-delegable by default (e.g., Google/Apple).

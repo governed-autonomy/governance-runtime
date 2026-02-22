@@ -32,3 +32,9 @@ governance always-human --domain google.com
 governance decide --url "https://mail.google.com/" --action login --profile standard --pretty
 ```
 
+## 5) Toy PEP wrapper demo (PDP called before a tool call)
+This is a tiny illustration of how a policy enforcement point (PEP) could call the policy decision point (PDP) before running a tool.
+
+```bash
+python examples/pep_wrapper_demo.py
+```
