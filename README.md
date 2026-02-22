@@ -204,7 +204,8 @@ See `TROUBLESHOOTING.md`.
 ## Testing philosophy (MVP)
 - Prefer deterministic rules + test coverage over “prompt discipline.”
 - Add metamorphic/variation tests to reduce regressions from wording changes.
-- Include a toy PEP simulation (see `governance_runtime/pep_sim.py`) so we can test the enforcement seam (tool is only called on ALLOW).
+- Include a **toy PEP simulation** (see `governance_runtime/pep_sim.py`) to test the enforcement seam (a “tool” function is only called on **ALLOW**; it is not called on **ASK/DENY**).
+  - This is intentionally safe: it does **not** execute real system/browser tools.
 
 ## Wizards (no-JSON UX)
 - `governance wizard` — run decisions on many URLs interactively.
