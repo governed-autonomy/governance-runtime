@@ -57,3 +57,30 @@ def test_pep_sim_commit_point_without_snapshot_in_execution_asks():
     assert res.kind == "ASK"
     assert out is None
     assert called["n"] == 0
+
+
+def test_pep_sim_commit_point_with_snapshot_still_asks_but_not_for_state_binding():
+    called = {"n": 0}
+
+    def tool():
+        called["n"] += 1
+        return "CLICKED_CONFIRM"
+
+    policy_input = {
+        "request_text": "confirm purchase",
+        "provenance": "USER_INTENT",
+        "policy_profile": "standard",
+        "action": "purchase",
+        "effects": ["[MONEY]", "BROWSER_COMMIT_POINT"],
+        "targets": {"urls": ["https://example.com/checkout"]},
+        # execution phase + snapshot binding present
+        "state": {"phase": "execution", "snapshot_ref": "snap_123"},
+    }
+
+    res, out = enforce_then_call(policy_input, tool)
+    assert res.kind == "ASK"  # still ASK due to money + sharpness defaults
+    assert out is None
+    assert called["n"] == 0
+
+    reasons = list(res.decision_output.get("reasons") or [])
+    assert "R4.COMMIT_POINT_REQUIRES_STATE_BINDING" not in reasons
