@@ -9,6 +9,14 @@ __pycache__/
 # Test / run artifacts
 .pytest_cache/
 
+# Local outputs (optional evidence; keep out of git by default)
+DEMO_OUTPUT.txt
+TEST_OUTPUT.txt
+
+# Packaging artifacts
+*.egg-info/
+
 # Receipts / runs
 runs/
+receipts/
 archive/runs__sample_receipts/
