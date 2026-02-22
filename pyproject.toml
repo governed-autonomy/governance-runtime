@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "governance-runtime"
+version = "0.1.1"
+description = "Policy-gated governance runtime MVP"
+requires-python = ">=3.12"
+
+[project.scripts]
+governance = "governance_runtime.cli:main"
+
+[tool.setuptools]
+# Only ship the Python package; keep spec/config/runs as non-package data.
+packages = ["governance_runtime", "governance_runtime.policy"]
+
+[tool.setuptools.package-data]
+# (Optional) ship specs/config as package data later; not needed for MVP CLI.
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,38 @@
+{
+  "always_human_domains": [
+    "google.com",
+    "appleid.apple.com"
+  ],
+  "allowed_login_domains_by_profile": {
+    "strict": [],
+    "standard": [],
+    "experimental": []
+  },
+  "override_always_human_domains_by_profile": {
+    "standard": [],
+    "experimental": []
+  },
+  "action_policies_by_profile": {
+    "strict": {
+      "purchase": "DENY",
+      "transfer-funds": "DENY",
+      "system-settings": "DENY",
+      "db-delete": "DENY",
+      "read-secrets": "DENY"
+    },
+    "standard": {
+      "purchase": "ASK",
+      "transfer-funds": "ASK",
+      "system-settings": "ASK",
+      "db-delete": "ASK",
+      "read-secrets": "DENY"
+    },
+    "experimental": {
+      "purchase": "ASK",
+      "transfer-funds": "ASK",
+      "system-settings": "ASK",
+      "db-delete": "ASK",
+      "read-secrets": "DENY"
+    }
+  }
+}

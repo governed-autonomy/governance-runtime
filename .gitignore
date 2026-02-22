@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS
+.DS_Store
+
+# Test / run artifacts
+.pytest_cache/
+
+# Receipts / runs
+runs/
+archive/runs__sample_receipts/

@@ -1,0 +1,6 @@
+{
+  "request_text": "Place a $100 order",
+  "provenance": "USER_INTENT",
+  "effects": ["[MONEY]"],
+  "state": {"phase": "planning", "snapshot_ref": null}
+}
