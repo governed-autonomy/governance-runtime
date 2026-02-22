@@ -9,6 +9,14 @@ Given a request + provenance + effect tags (money/privacy/reputation/etc.) + tar
 
 It also supports **receipts** (audit artifacts) and a growing **pytest** suite (quizzes + metamorphic/variation tests) to prevent safety regressions.
 
+## Safety & liability (plain language)
+This is an **experimental MVP** intended for local evaluation and iteration.
+- It is **not** a production security boundary.
+- It comes with **no warranty**.
+- You are responsible for how you deploy it and what you allow an agent to do.
+
+See `DISCLAIMER.md` and `LICENSE`.
+
 
 ## Why this exists
 LLM agents fail in two common ways:
