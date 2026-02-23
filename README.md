@@ -1,5 +1,7 @@
 # governance_runtime (MVP)
 
+![CI](https://github.com/governed-autonomy/governance-runtime/actions/workflows/ci.yml/badge.svg)
+
 A small, deterministic **policy gate** for tool-using agents.
 
 Given a request + provenance + effect tags (money/privacy/reputation/etc.) + targets (URLs/domains), it returns:
